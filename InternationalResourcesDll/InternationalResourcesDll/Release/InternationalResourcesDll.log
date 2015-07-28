@@ -1,0 +1,9 @@
+﻿  stdafx.cpp
+  dllmain.cpp
+  InternationalResourcesDll.cpp
+Resource.rc(65): warning RC4067: unexpected characters following '#endif' directive; newline expected
+  
+  正在生成代码
+  All 0 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  已完成代码的生成
+  InternationalResourcesDll.vcxproj -> D:\项目\Visual C++ 项目\InternationalResources\Release\InternationalResourcesDll.dll
