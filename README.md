@@ -9,6 +9,7 @@
 3. DLLNotes : 创建和调用一个dll的样例代码
 4. StaticText：如何在Win32位下创建和动态改变StaticText。
 5. NetTime ： 获取SYSTEMTIME类型的网络时间。
+6. AddMarkdownPost： 根据我自己的markdown模板格式弄的文章模板生成工具，可在代码里根据自己的文章格式修改！输入文件名和标签，可以根据本地时间自动生成文章模板。
 
 
 
