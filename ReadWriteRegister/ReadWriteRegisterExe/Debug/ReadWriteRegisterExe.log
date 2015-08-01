@@ -1,0 +1,17 @@
+﻿  ReadWriteRegisterExe.cpp
+d:\项目\visual c++ 项目\readwriteregister\readwriteregisterexe\readwriteregisterexe.cpp(55): warning C4996: 'wcscpy': This function or variable may be unsafe. Consider using wcscpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\corecrt_wstring.h(121): note: 参见“wcscpy”的声明
+d:\项目\visual c++ 项目\readwriteregister\readwriteregisterexe\readwriteregisterexe.cpp(54): warning C4101: “val”: 未引用的局部变量
+  ReadWriteRegister.cpp
+d:\项目\visual c++ 项目\readwriteregister\readwriteregisterexe\readwriteregister.cpp(104): warning C4996: 'wcscpy': This function or variable may be unsafe. Consider using wcscpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\corecrt_wstring.h(121): note: 参见“wcscpy”的声明
+d:\项目\visual c++ 项目\readwriteregister\readwriteregisterexe\readwriteregister.cpp(105): warning C4996: 'wcscpy': This function or variable may be unsafe. Consider using wcscpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\corecrt_wstring.h(121): note: 参见“wcscpy”的声明
+d:\项目\visual c++ 项目\readwriteregister\readwriteregisterexe\readwriteregister.cpp(107): warning C4996: 'wcscpy': This function or variable may be unsafe. Consider using wcscpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\corecrt_wstring.h(121): note: 参见“wcscpy”的声明
+d:\项目\visual c++ 项目\readwriteregister\readwriteregisterexe\readwriteregister.cpp(149): warning C4996: 'wcscpy': This function or variable may be unsafe. Consider using wcscpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\corecrt_wstring.h(121): note: 参见“wcscpy”的声明
+d:\项目\visual c++ 项目\readwriteregister\readwriteregisterexe\readwriteregister.cpp(151): warning C4996: 'wcscpy': This function or variable may be unsafe. Consider using wcscpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\corecrt_wstring.h(121): note: 参见“wcscpy”的声明
+  正在生成代码...
+  ReadWriteRegisterExe.vcxproj -> D:\项目\Visual C++ 项目\ReadWriteRegister\Debug\ReadWriteRegisterExe.exe
