@@ -7,10 +7,18 @@
 2. InternationalResourcesDll: 国际化资源dll样例代码, 我暂时所能够找到的国际化方法里我认为是最好的,在English和简体中文系统下测试能行,这个不需要用代码判断当前程序运行环境,会自动根据当前系统语言版本从rc文件里不同的块中读取资源!
 
 3. DLLNotes : 创建和调用一个dll的样例代码
+
 4. StaticText：如何在Win32位下创建和动态改变StaticText。
+
 5. NetTime ： 获取SYSTEMTIME类型的网络时间。
+
 6. AddMarkdownPost： 根据我自己的markdown模板格式弄的文章模板生成工具，可在代码里根据自己的文章格式修改。输入文件名和标签，可以根据本地时间自动生成文章模板。
+
 7. ReadWriteRegister： 注册表读写和删除，设置开机自动启动。
+
+8. PhotosIndexCreater： 根据我自己的html模板生成相册index.html文件，需要oepncv支持，利用opencv计算了图片尺寸并自动加入到html文件中。
+
+9. WinService：windows守护进程（服务）样例，配合注释详细介绍了整个守护进程的原理
 
 
 

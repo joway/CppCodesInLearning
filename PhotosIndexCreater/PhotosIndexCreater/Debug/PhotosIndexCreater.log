@@ -1,0 +1,26 @@
+﻿  PhotosIndexCreater.cpp
+c:\opencv\build\include\opencv2\core\mat.hpp(1965): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\opencv\build\include\opencv2\core\persistence.hpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\opencv\build\include\opencv2\core\utility.hpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\opencv\build\include\opencv2\core\utility.hpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+d:\项目\visual c++ 项目\photosindexcreater\photosindexcreater\photosindexcreater.cpp(124): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\string.h(119): note: 参见“strcpy”的声明
+d:\项目\visual c++ 项目\photosindexcreater\photosindexcreater\photosindexcreater.cpp(125): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\string.h(90): note: 参见“strcat”的声明
+d:\项目\visual c++ 项目\photosindexcreater\photosindexcreater\photosindexcreater.cpp(150): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\string.h(119): note: 参见“strcpy”的声明
+d:\项目\visual c++ 项目\photosindexcreater\photosindexcreater\photosindexcreater.cpp(151): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\string.h(119): note: 参见“strcpy”的声明
+d:\项目\visual c++ 项目\photosindexcreater\photosindexcreater\photosindexcreater.cpp(152): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\string.h(90): note: 参见“strcat”的声明
+d:\项目\visual c++ 项目\photosindexcreater\photosindexcreater\photosindexcreater.cpp(153): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\string.h(90): note: 参见“strcat”的声明
+d:\项目\visual c++ 项目\photosindexcreater\photosindexcreater\photosindexcreater.cpp(169): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\string.h(453): note: 参见“strtok”的声明
+d:\项目\visual c++ 项目\photosindexcreater\photosindexcreater\photosindexcreater.cpp(175): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\stdio.h(1769): note: 参见“sprintf”的声明
+d:\项目\visual c++ 项目\photosindexcreater\photosindexcreater\photosindexcreater.cpp(176): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\stdio.h(1769): note: 参见“sprintf”的声明
+d:\项目\visual c++ 项目\photosindexcreater\photosindexcreater\photosindexcreater.cpp(287): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\string.h(119): note: 参见“strcpy”的声明
+  PhotosIndexCreater.vcxproj -> D:\项目\Visual C++ 项目\PhotosIndexCreater\Debug\PhotosIndexCreater.exe

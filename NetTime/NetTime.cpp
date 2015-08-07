@@ -5,9 +5,12 @@
 #include <crtdbg.h>
 #pragma comment(lib, "ws2_32.lib")
 
-#define NET_TIME_PORT	37
-#define TIMEOUT_CONNECT 5
+#define NET_TIME_PORT   37
+#define TIMEOUT_CONNECT 1
 #define TIMEOUT_RECEIVE	1
+
+BOOL  GetTimeFromInternet(SYSTEMTIME &st);
+
 
 BOOL GetRemoteTime(char* szSever, unsigned long& ulTime);
 SYSTEMTIME TransToSystemTime(unsigned long ulTime);
@@ -22,18 +25,18 @@ char* sever[] =
 		"132.163.4.103",
 		"128.138.140.44",
 	    //以下不知为何连接不上
-		"210.72.145.44",//
-		"133.100.11.8",//
-		"192.43.244.18",//
-		"131.107.1.10",//
-		"69.25.96.13",//
-		"216.200.93.8",//
-		"208.184.49.9",//
-		"207.126.98.204",//
-		"207.200.81.113",//
-		"64.236.96.53",//
-		"10.255.255.2",//
-		"81.6.42.224",//
+		//"210.72.145.44",//
+		//"133.100.11.8",//
+		//"192.43.244.18",//
+		//"131.107.1.10",//
+		//"69.25.96.13",//
+		//"216.200.93.8",//
+		//"208.184.49.9",//
+		//"207.126.98.204",//
+		//"207.200.81.113",//
+		//"64.236.96.53",//
+		//"10.255.255.2",//
+		//"81.6.42.224",//
 		NULL
 };
 
