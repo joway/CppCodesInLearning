@@ -8,6 +8,8 @@
 #include <Commdlg.h>
 #include <opencv2/core/core.hpp>  
 #include <opencv2/highgui/highgui.hpp>
+#include <string.h>
+#include <vector>
 #define MAX_LOADSTRING 100
 using namespace cv;
 using namespace std;
@@ -47,8 +49,23 @@ PSTR pWCharTopChar(PWSTR pWChar);
 PWSTR pCharTopWChar(PCSTR pChar);
 
 
+class Img
+{
+public:
+	Img(int w, int h, char *n,string link) {
+		width = w;
+		height = h;
+		strcpy(name, n);
+		fullLink = link;
+	}
+	int width;
+	int height;
+	char name[MAX_PATH];
+	string fullLink;
+};
 
 
+vector<Img> ImgBox;
 
 int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 	_In_opt_ HINSTANCE hPrevInstance,
@@ -140,14 +157,14 @@ INT_PTR CALLBACK PhotosIndexCreater(HWND hDlg, UINT message, WPARAM wParam, LPAR
 			SendMessage(hEdt, WM_SETTEXT, NULL, (LPARAM)szFileName);
 		}
 		else if (LOWORD(wParam) == IDC_BUTTON_CREAT) {
-			/*步骤：
+			/*步骤
 			复制head.html至index.html，计算出图片尺寸,以对应格式追加，
-			打开文件end.html，追加。关闭所有文件。
+			打开文件end.html追加。关闭所有文件。
 			PS:这里发现我在当前exe目录下打开head.html会失败，后来只能手动加上文件路径了。
 			   顺便把index.html也给生成到图片路径下
 			*/
 			GetModuleFileName(NULL, szExePath, MAX_PATH);
-			(strchr(szExePath, '\\'))[1] = '\0';//删除文件名，只获得路径
+			(strrchr(szExePath, '\\'))[1] = '\0';//删除文件名只获得路径
 
 			strcpy(szHeadFileName, szExePath);
 			strcpy(szEndFileName, szExePath);
@@ -158,7 +175,7 @@ INT_PTR CALLBACK PhotosIndexCreater(HWND hDlg, UINT message, WPARAM wParam, LPAR
 				MessageBox(NULL, "failed", "", MB_OK);
 				return 1;
 			}
-			wofstream fout(szIndexFileName, wfstream::app);
+			ofstream fout(szIndexFileName, wfstream::app);
 			if (fout.fail()) {
 				MessageBox(NULL, "fout.fail()", "", MB_OK);
 				return 1;
@@ -167,20 +184,42 @@ INT_PTR CALLBACK PhotosIndexCreater(HWND hDlg, UINT message, WPARAM wParam, LPAR
 			int count = 0;
 			char *szFileNameBox[MAX_PATH];
 			char *buf = szFileName;
-			char width[10], height[10];
 			while ((szFileNameBox[count] = strtok(buf, "\n")) != NULL) {
 				string strFullLink = szLink;
 				char fname[MAX_PATH];
 				getFileNamefromFullName(szFileNameBox[count], fname);
 				strFullLink += fname;
 				IplImage* img = cvLoadImage(szFileNameBox[count]);
-				sprintf(width, "%d", img->width);
-				sprintf(height, "%d", img->height);
-				fout << "<div class=\"pic\"> <a href=\"#\" class=\"img imgclasstag\" imggroup=\"gal\" bigimgwidth=\"" << width << "\" bigimgheight=\"" << height << "\" bigimgsrc = \"" << strFullLink.c_str() << "\"> <img src = \"" << strFullLink.c_str() << "\" / > </a> </div>" << endl;
+				ImgBox.push_back(Img(img->width, img->height, szFileNameBox[count],strFullLink));
+
 				cvReleaseImage(&img);
 				count++;
 				buf = NULL;
 			}
+
+			//对width进行从小到大排序后输出到文件:
+			//冒泡排序
+			int flag = ImgBox.size();
+			while (flag > 0)
+			{
+				int k = flag;
+				flag = 0;
+				for (int j = 1; j < k; j++)
+					if (ImgBox[j - 1].width > ImgBox[j].width)
+					{
+						swap(ImgBox[j - 1], ImgBox[j]);
+						flag = j;
+					}
+			}
+
+			for (auto i : ImgBox) {
+				char width[10], height[10];
+				sprintf(width, "%d", i.width);
+				sprintf(height, "%d", i.height);
+				fout << "<div class=\"pic\"> <a href=\"#\" class=\"img imgclasstag\" imggroup=\"gal\" bigimgwidth=\"" << width << "\" bigimgheight=\"" << height << "\" bigimgsrc = \"" << i.fullLink.c_str() << "\"> <img src = \"" << i.fullLink.c_str() << "\" / > </a> </div>" << endl;
+			}
+
+			ImgBox.clear();
 			fout.close();
 
 			HANDLE hFile;
